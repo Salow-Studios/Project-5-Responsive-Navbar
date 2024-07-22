@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="stylesheet" href="styles.css">
+    <title>Salow Studios | Responsive Navigation Bar</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav__logo"><a href="#">Salow Studios</a></div>
+            <ul class="nav__links">
+                <li class="link">Home</li>
+                <li class="link">Photos</li>
+                <li class="link">Websites</li>
+                <li class="link">Blog</li>
+                <li class="link">Contact</li>
+            </ul>
+            <div class="toggle__btn"><i class="ri-menu-line"></i></div>
+        </nav>
+        <div class="hero">
+            <h2>Explore THE</h2>
+            <h1>DEEP BLUE SKY</h1>
+        </div>
+    </header>
+    <script>
+        const toggleButton = document.querySelector(".toggle__btn")
+        const toggleButtonIcon = document.querySelector(".toggle__btn i")
+        const menu = document.querySelector(".nav__links")
+
+        toggleButton.onclick = function() {
+            menu.classList.toggle("open");
+            const isOpen = menu.classList.contains("open");
+
+            toggleButtonIcon.classList = isOpen ? "ri-close-line" : "ri-menu-line"
+        };
+    </script>
+</body>
+</html>
